@@ -7,7 +7,7 @@ export const FormControlled = () => {
     password: "",
     phone: "",
     checked: false,
-    selectOption: "",
+    selectOptions: "",
   });
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -74,7 +74,7 @@ export const FormControlled = () => {
           </div>
           <select
             name="selectOptions"
-            value={formData.selectOption}
+            value={formData.selectOptions}
             onChange={handleChange}
             className="w-full p-3 border border-gray-200  rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
@@ -108,7 +108,7 @@ export const FormControlled = () => {
             {formData.checked ? "Accepted" : "Not Accepted"}
           </p>
           <p>
-            <strong>Skill:</strong> {formData.selectOption}
+            <strong>Skill:</strong> {formData.selectOptions}
           </p>
         </div>
       </div>
