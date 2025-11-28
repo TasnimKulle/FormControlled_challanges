@@ -5,12 +5,14 @@ export const ReactHookForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const onData = (data) => {
     alert("Registration Seccsefulle\n" + JSON.stringify(data));
+    reset();
   };
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md ">
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md  mb-3">
       <h2 className="text-2xl font-bold mb-6">Student Registration</h2>
       <form onSubmit={handleSubmit(onData)} className="space-y-4">
         <div>
@@ -65,7 +67,7 @@ export const ReactHookForm = () => {
         </div>
         <div>
           <label className="font-medium text-sm">subject Intersted</label>
-          <div >
+          <div className="space-y-2">
             <label className="flex items-center">
               <input
                 type="checkbox"
@@ -89,14 +91,16 @@ export const ReactHookForm = () => {
             <label className="flex items-center">
               <input
                 type="checkbox"
-                {...register('subjects')}
+                {...register("subjects")}
                 value="english"
                 className="mr-2"
               />
               English
             </label>
           </div>
-          {errors.subjects && <p className="text-red-500">{errors.subjects.message}</p>}
+          {errors.subjects && (
+            <p className="text-red-500">{errors.subjects.message}</p>
+          )}
         </div>
         <button
           type="submit"
