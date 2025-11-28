@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
+    "form": "^0.2.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-hook": "^0.0.1",
+    "react-hook-form": "^7.66.1",
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
